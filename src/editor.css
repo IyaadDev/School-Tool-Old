@@ -1,0 +1,56 @@
+.genContainer {
+    color: black;
+    background-color: #ffffff6f;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    height: 100%;
+    width: 100%;
+    border-style: none;
+}
+
+.genContainer:active {
+    border-style: none;
+}
+
+.editor {
+    height: 100%!important;
+    width: 100%!important;
+}
+
+.componentGenItem {
+    list-style-type: none;
+    color: black;
+    background-color: white;
+    padding: 10px;
+}
+
+.componentGenList {
+    list-style-type: none;
+    border-radius: 12px!important;
+}
+
+.componentGenItem:hover {
+    list-style-type: none;
+    color: black;
+    background-color: grey;
+    padding: 10px;
+}
+
+.rdw-editor-main {
+    background-color: #ffffff6f;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    padding-top: 5px;
+    padding: 10px;
+    font-size: large;
+    color: black;
+}
+
+.rdw-editor-toolbar {
+    border-radius: 25px!important;
+    margin-top: 25px!important;
+    color: black!important;
+    text-decoration: none!important;
+}

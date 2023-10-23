@@ -1,0 +1,29 @@
+body {
+    color: #fff;
+    background: url("https://cloud.acroford.com/sct/backgrounds/1.webp");
+}
+
+.nav {
+    background-color: #42424291;
+}
+
+.icon {
+    width: auto!important;
+    height: 3vw;
+    margin: 0.25vw;
+}
+
+.brandName {
+    margin: 0.15vw;
+    font-size: xx-large!important;
+}
+
+.brand {
+    padding: 0.25vw;
+    text-align: center!important;
+}
+
+.panel {
+    background-color: rgba(255, 255, 255, 0.775)!important;
+    border-radius: 10px;
+}

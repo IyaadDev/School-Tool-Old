@@ -1,0 +1,25 @@
+.gradient-text-something {
+    background: linear-gradient(128deg, var(--bs-code-color) 0%, var(--bs-indigo) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 42px;
+  }
+  
+  .gradient-text-green {
+    background: linear-gradient(45deg, #6effb0, #1a8cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .gradient-text-landing {
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 58px!important;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(45deg, #FF0000, #0000FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
