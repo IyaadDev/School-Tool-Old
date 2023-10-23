@@ -1,8 +1,31 @@
-# React + Vite
+# School Tool
+A student productivity tool that's still under heavy development.
+We're starting off with some basic features:
+- Pomodoro Timers
+- Creating "Lessons" in JSON
+- Creating Documentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Important Notice
+We are currently looking for contributors who can help us complete School-Tool soon!
+**See <a href="contributing.md">contributing.md</a> for more info**
 
-Currently, two official plugins are available:
+## Launching School Tool
+Here's how you check School Tool out.
+### Locally (For Contributors and Developers)
+Put this code in your terminal, replace <code>npm</code> with <code>yarn</code> if you are using Mac.<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+mkdir AcroFord
+cd AcroFord
+git clone "https://github.com/AcroFord/School-Tool.git"
+cd School-Tool
+npm install
+npm run preview
+```
+
+### For Users
+⚠️School Tool has not been fully devloped yet⚠️
+Go to <a href="app.schooltool.io">app.schooltool.io</a>, if that doesn't work, try the below alternative domains:
+- <a href="app.schooltool.uk">app.schooltool.uk</a>
+- <a href="app.schooltool.net">app.schooltool.net</a>
+
