@@ -6,3 +6,155 @@
     margin: 16px;
     padding: 16px;
 }
+
+/* Text Panel CSS */
+.textPanelHeading {
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+}
+
+.textPanelContent {
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+}
+
+/* Text Panel With Icon CSS */
+.textPanelWithIconImg {
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+}
+
+.textPanelWithIconHeading {
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+}
+
+.textPanelWithIconContent {
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+}
+
+/* List Panel CSS */
+.notesListHeading {
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+}
+
+.notesListList {
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+}
+
+.notesListItem {
+    color: #000!important; 
+    padding: 0.35vw;
+    margin: auto!important;
+    list-style-type: "-";
+    list-style-position: inside;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.notesHeader {
+    margin-bottom: 1vw!important;
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+}
+
+.notesRedirect {
+    /*This is the button*/
+}
+
+/* Notes Info*/
+.notesInfoContent {
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+}
+
+/* Questions */
+.notesQuestion {
+    /* This is the container*/
+}
+
+.questionTitle {
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+}
+
+.questionAnswer {
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+}
+
+.panel-body {
+    padding: 1vw!important;
+}
+
+.panel {
+    margin: 1vw!important;
+}
+
+.infoBox {
+    /*This is a container*/
+}
+
+.infoBoxHeader {
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+    background: #bc4e9c!important;
+    background: -webkit-linear-gradient(to right, #f80759, #bc4e9c)!important;
+    background: linear-gradient(to right, #f80759, #bc4e9c)!important;    
+}
+
+.infoBoxContent {
+    color: #000!important;
+    padding: 0.1vw;
+    margin: 0.1vw;
+}
+
+/* LESSON WIDGET CSS */
+.lessonH {
+    color: #000!important;
+    margin: 0.3vw!important;
+    padding: 0.55vw!important;
+}
+
+.lessonP {
+    color: #000!important;
+    margin: 0.3vw!important;
+    padding: 0.55vw!important;
+}
+
+.lessonVC {
+    /*Video Container*/
+    border-radius: 16px;
+    margin: 0.3vw!important;
+    padding: 0.55vw!important;
+}
+
+.lessonV {
+    border-radius: 16px;
+    height: 20vw!important;
+    width: 100%!important;
+    margin: 0.3vw!important;
+    padding: 0.55vw!important;
+}
+
+.lessonI {
+    border-radius: 7px;
+    /*This is the image element*/
+    margin: 0.3vw!important;
+    padding: 0.55vw!important;
+}
