@@ -6,7 +6,6 @@ import Login from './login';
 import Editor from './editor';
 import MyViewer from './viewer';
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
-import LoginButton from "./Login";
 import LogoutButton from "./Logout";
 import Profile from "./Profile";
 
@@ -17,7 +16,7 @@ function Main() {
         <Route exact path="/app/home" element={<App />} />
         <Route exact path="/app/editor" element={<Editor />} />
         <Route exact path="/app/viewer" element={<MyViewer />} />
-        <Route exact path="/app/login" element={<LoginButton />} />
+        <Route exact path="/app/login" element={<Login />} />
         <Route exact path="/app/logout" element={<LogoutButton />} />
         <Route exact path="/app/profile" element={<Profile />} />
       </Routes>

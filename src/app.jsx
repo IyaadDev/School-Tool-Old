@@ -1,5 +1,5 @@
-import 'bootstrap.min.css';
-import 'global.css';
+import './bootstrap.min.css';
+import './global.css';
 import Nav from './Nav';
 import Widgets from "./Widgets";
 

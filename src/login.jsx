@@ -1,6 +1,6 @@
 import React from "react";
-import "login.css";
-import "bootstrap.min.css";
+import "./login.css";
+import "./bootstrap.min.css";
 
 const Login = () => {
   return (

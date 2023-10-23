@@ -1,6 +1,6 @@
 import React from 'react';
-import "bootstrap.min.css"
-import "widgets.css"
+import "./bootstrap.min.css"
+import "./widgets.css"
 
 function TextPanel({ heading, content, className }) {
   return (
