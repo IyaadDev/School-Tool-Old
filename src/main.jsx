@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import App from 'app';
+import App from './app';
 import Login from 'login';
 import Editor from 'editor';
 import MyViewer from 'viewer';
