@@ -3,7 +3,7 @@ import { EditorState, convertToRaw } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import "editor.css";
-import Nav from "Nav";
+import Nav from "./Nav";
 
 function MyEditor() {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());

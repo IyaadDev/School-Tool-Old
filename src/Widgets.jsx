@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { TextPanel, TextPanelWithIcon, Notes, Info, Lesson } from "Panels";
+import { TextPanel, TextPanelWithIcon, Notes, Info, Lesson } from "./Panels";
 
 function Widgets() {
   const [widgets, setListOfWidgets] = useState([]);
