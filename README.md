@@ -7,7 +7,7 @@ We're starting off with some basic features:
 
 ### Important Notice
 We are currently looking for contributors who can help us complete School-Tool soon!
-**See <a href="contributing.md">contributing.md</a> for more info**
+**See <a href="CONTRIBUTING.md">contributing.md</a> for more info**
 
 ## Launching School Tool
 Here's how you check School Tool out.
