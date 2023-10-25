@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Nav from "./Nav";
+import Nav from "../components/Navbar";
 
 function JSONToHTML() {
   const urlParams = new URLSearchParams(window.location.search);

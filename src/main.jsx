@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import App from './app';
-import Login from './login';
-import Editor from './editor';
-import MyViewer from './viewer';
+import App from './pages/app';
+import Editor from './pages/editor';
+import MyViewer from './pages/viewer';
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
-import LogoutButton from "./Logout";
-import Profile from "./Profile";
+import LogoutButton from "./components/LogoutButton";
+import Profile from "./components/Profile";
 
 function Main() {
   return (
@@ -16,7 +15,6 @@ function Main() {
         <Route exact path="/app/home" element={<App />} />
         <Route exact path="/app/editor" element={<Editor />} />
         <Route exact path="/app/viewer" element={<MyViewer />} />
-        <Route exact path="/app/login" element={<Login />} />
         <Route exact path="/app/logout" element={<LogoutButton />} />
         <Route exact path="/app/profile" element={<Profile />} />
       </Routes>

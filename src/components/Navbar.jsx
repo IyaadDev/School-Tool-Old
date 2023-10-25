@@ -1,4 +1,4 @@
-function Nav() {
+function Navbar() {
     return (
       <nav className="navbar sticky-top nav">
         <a className="navbar-brand brand d-flex align-items-center" href="#">
@@ -9,4 +9,4 @@ function Nav() {
     );
   }
 
-export default Nav; 
+export default Navbar;

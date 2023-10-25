@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { EditorState, convertToRaw } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import "./editor.css";
-import Nav from "./Nav";
+import "../css/editor.css";
+import Nav from "../components/Navbar";
 
 function MyEditor() {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
