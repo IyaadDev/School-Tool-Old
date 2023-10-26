@@ -18,7 +18,7 @@ function Main() {
         <Route exact path="/app/viewer" element={<MyViewer />} />
         <Route exact path="/app/logout" element={<LogoutButton />} />
         <Route exact path="/app/profile" element={<Profile />} />
-        <Route exact path="/app/index" element={<AppsList />} />
+        <Route exact path="/" element={<AppsList />} />
       </Routes>
     </BrowserRouter>
   );
