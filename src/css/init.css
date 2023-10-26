@@ -6,11 +6,13 @@
     background-color: rgba(0, 0, 0, 0.65);
     border-radius: 16px;
     padding: 1.25vw;
-    transition: 2s;
+    padding-top: 3.5vw;
+    padding-bottom: 3.5vw;
+    transition: 0.6s;
 }
 
 .appCard:hover {
-    transform: scale(1.15);
+    transform: scale(1.06);
 }
 .appImg {
     
@@ -27,6 +29,7 @@
     margin: 0;
 }
 
-body {
-    background-color: black!important;
+.cardList {
+    justify-content: center;
+    text-align: centerw2    ;
 }
