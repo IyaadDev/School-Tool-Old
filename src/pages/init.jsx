@@ -5,7 +5,7 @@ function AppsList() {
   return (
     <div className="home">
       <div className="container">
-        <div className="row">
+        <div className="row cardList">
           <a className="appLink" href="chingching.schooltool.io">
             <div className="col-md-5 appCard justify-content-center text-center">
               <img
