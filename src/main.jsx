@@ -7,6 +7,7 @@ import MyViewer from './pages/viewer';
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 import LogoutButton from "./components/LogoutButton";
 import Profile from "./components/Profile";
+import AppsList from "./pages/init";
 
 function Main() {
   return (
@@ -17,6 +18,7 @@ function Main() {
         <Route exact path="/app/viewer" element={<MyViewer />} />
         <Route exact path="/app/logout" element={<LogoutButton />} />
         <Route exact path="/app/profile" element={<Profile />} />
+        <Route exact path="/app/index" element={<AppsList />} />
       </Routes>
     </BrowserRouter>
   );
