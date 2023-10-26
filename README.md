@@ -1,4 +1,4 @@
-# Ching Ching - School Tool
+# School Tool
 A student productivity tool that's still under heavy development.
 We're starting off with some basic features:
 - Pomodoro Timers
