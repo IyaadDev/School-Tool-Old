@@ -8,6 +8,7 @@ import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 import LogoutButton from "./components/LogoutButton";
 import Profile from "./components/Profile";
 import AppsList from "./pages/init";
+import TimerPage from './pages/timer';
 
 function Main() {
   return (
@@ -19,6 +20,7 @@ function Main() {
         <Route exact path="/app/logout" element={<LogoutButton />} />
         <Route exact path="/app/profile" element={<Profile />} />
         <Route exact path="/" element={<AppsList />} />
+        <Route exact path="/app/timer" element={<TimerPage />} />
       </Routes>
     </BrowserRouter>
   );
