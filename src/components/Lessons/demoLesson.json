@@ -1,0 +1,48 @@
+{
+    "lessonInfo": {
+        "name": "A quick overview of Photosynthesis",
+        "version": "1.0.1",
+        "description":"A quick overview of Photosynthesis",
+        "audienceLevel": 4
+    },
+    "lessonData": {
+        "pages": 1,
+        "pagesData": {
+            "1": {
+                "type": "info",
+                "data": {
+                    "blocks": [
+                      {
+                        "key": "5jf1a",
+                        "text": "Photosynthesis",
+                        "type": "header-one",
+                        "depth": 0,
+                        "inlineStyleRanges": [],
+                        "entityRanges": [],
+                        "data": {}
+                      },
+                      {
+                        "key": "31s57",
+                        "text": "Sometimes, life is confusing, isn't it?",
+                        "type": "unstyled",
+                        "depth": 0,
+                        "inlineStyleRanges": [],
+                        "entityRanges": [],
+                        "data": {}
+                      },
+                      {
+                        "key": "3bso7",
+                        "text": "Like fr bruv!!!!!",
+                        "type": "unstyled",
+                        "depth": 0,
+                        "inlineStyleRanges": [],
+                        "entityRanges": [],
+                        "data": {}
+                      }
+                    ],
+                    "entityMap": {}
+                  }
+            }
+        }
+    }
+}
