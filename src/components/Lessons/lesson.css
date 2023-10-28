@@ -1,0 +1,24 @@
+.lh {
+    text-align: center;
+    color: #000;
+}
+
+.lv {
+    font-family: monospace;
+    font-size: small;
+    text-align: center;
+}
+
+.ld {
+    text-align: center;
+}
+
+.lal {
+    text-align: center;
+}
+
+.ll {
+    text-align: center;
+    height: 100px;
+    width: auto;
+}

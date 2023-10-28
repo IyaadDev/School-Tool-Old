@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import "./lesson.css"
+import Navbar from "../Navbar";
 
 function FetchLessonDataL({ setLessonData }) {
   const getLessonIdFromURL = () => {
@@ -36,23 +38,26 @@ function FetchLessonDataL({ setLessonData }) {
 
 function InfoL({ lessonData }) {
   if (!lessonData) {
-    return <div>Loading...</div>; // or some other loading indicator
+    return (
+      <div className="panel">
+        <div>Loading...</div>
+      </div>
+    ); // or some other loading indicator
   }
 
-  const { pagesData } = lessonData.lessonData;
-  const currentPageData = pagesData["1"];
+  const { name, version, description, audienceLevel } = lessonData.lessonInfo;
 
-  const renderBlocks = currentPageData.data.blocks.map((block) => {
-    if (block.type === "header-one") {
-      return <h1 key={block.key}>{block.text}</h1>;
-    } else if (block.type === "unstyled") {
-      return <p key={block.key}>{block.text}</p>;
-    } else {
-      return null; // handle other block types if necessary
-    }
-  });
-
-  return <div>{renderBlocks}</div>;
+  return (
+    <div className="container">
+      <div className="panel text-center align-items-center">
+        <img src="https://cdn.acroford.com/sctC.webp" alt="logo" className="ll" />
+        <h1 className="lh">{name}</h1>
+        <p className="lv">Version: {version}</p>
+        <p className="ld">{description}</p>
+        <p className="lal">Recommended Grade: <b>{audienceLevel}</b></p>
+      </div>
+    </div>
+  );
 }
 
 function QuizL({}) {}
@@ -68,6 +73,7 @@ function LessonPlayer() {
 
   return (
     <div>
+      <Navbar />
       <FetchLessonDataL setLessonData={setLessonData} />
       <InfoL lessonData={lessonData} />
     </div>
