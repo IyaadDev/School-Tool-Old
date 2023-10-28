@@ -60,6 +60,75 @@ function InfoL({ lessonData }) {
   );
 }
 
+function Reading({ lessonData }) {
+  const convertToHTML = (jsonContent) => {
+    if (!jsonContent) return null;
+
+    return jsonContent.blocks.map((block) => {
+      if (block.type === "header-one") {
+        return <h1 key={block.key}>{block.text}</h1>;
+      } else if (block.type === "header-two") {
+        return <h2 key={block.key}>{block.text}</h2>;
+      } else if (block.type === "header-three") {
+        return <h3 key={block.key}>{block.text}</h3>;
+      } else if (block.type === "atomic") {
+        if (block.data.type === "image") {
+          return <img key={block.key} src={block.data.src} alt={block.text} />;
+        }
+      } else {
+        let style = {};
+        if (block.inlineStyleRanges) {
+          block.inlineStyleRanges.forEach(range => {
+            if (range.style === "BOLD") {
+              style.fontWeight = "bold";
+            } else if (range.style === "UNDERLINE") {
+              style.textDecoration = "underline";
+            } else if (range.style === "ITALIC") {
+              style.fontStyle = "italic";
+            }
+          });
+        }
+
+        if (block.entityRanges && block.entityRanges.length > 0) {
+          // Assuming only one entity per block for simplicity
+          const entity = block.entityRanges[0];
+          if (entity.type === "LINK") {
+            return (
+              <a key={block.key} href={entity.data.url} style={style}>
+                {block.text}
+              </a>
+            );
+          }
+        }
+
+        if (block.type === "ordered-list-item") {
+          return <ol key={block.key}><li style={style}>{block.text}</li></ol>;
+        } else if (block.type === "unordered-list-item") {
+          return <ul key={block.key}><li style={style}>{block.text}</li></ul>;
+        } else {
+          return <p key={block.key} style={style}>{block.text}</p>;
+        }
+      }
+    });
+  };
+
+  if (!lessonData) {
+    return <div>Loading...</div>; // or some other loading indicator
+  }
+
+  const currentPageData = lessonData.lessonData.pagesData["1"];
+
+  const htmlContent = convertToHTML(currentPageData.data);
+
+  return (
+    <div className="container">
+      <div className="panel text-center align-items-center">
+        <div className="lessonContent">{htmlContent}</div>
+      </div>
+    </div>
+  );
+}
+
 function QuizL({}) {}
 
 function ResultsL({}) {}
@@ -75,7 +144,7 @@ function LessonPlayer() {
     <div>
       <Navbar />
       <FetchLessonDataL setLessonData={setLessonData} />
-      <InfoL lessonData={lessonData} />
+      <Reading lessonData={lessonData} />
     </div>
   );
 }
