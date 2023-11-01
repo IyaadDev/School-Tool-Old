@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "./lesson.css"
+import "./lesson.css";
 import Navbar from "../Navbar";
 
 function FetchLessonDataL({ setLessonData }) {
   const getLessonIdFromURL = () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const lessonId = urlParams.get('id');
-    console.log('Lesson ID:', lessonId);
+    const lessonId = urlParams.get("id");
+    console.log("Lesson ID:", lessonId);
     return lessonId;
   };
 
@@ -16,16 +16,18 @@ function FetchLessonDataL({ setLessonData }) {
       var lessonId = lessonIdNo + ".json";
       if (lessonId) {
         try {
-          const response = await fetch(`https://cloud.acroford.com/sct/lessons/${lessonId}`);
+          const response = await fetch(
+            `https://cloud.acroford.com/sct/lessons/${lessonId}`
+          );
           if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error("Network response was not ok");
           }
           const data = await response.json();
-          console.log('Lesson data:', data);
+          console.log("Lesson data:", data);
           setLessonData(data);
           // Further logic with lessonData can be implemented here
         } catch (error) {
-          console.error('Error fetching lesson data:', error);
+          console.error("Error fetching lesson data:", error);
         }
       }
     };
@@ -36,13 +38,13 @@ function FetchLessonDataL({ setLessonData }) {
   return <div></div>;
 }
 
-function InfoL({ lessonData }) {
+function InfoL({ lessonData, handleStart }) {
   if (!lessonData) {
     return (
       <div className="panel">
         <div>Loading...</div>
       </div>
-    ); // or some other loading indicator
+    );
   }
 
   const { name, version, description, audienceLevel } = lessonData.lessonInfo;
@@ -50,17 +52,22 @@ function InfoL({ lessonData }) {
   return (
     <div className="container">
       <div className="panel text-center align-items-center">
-        <img src="https://cdn.acroford.com/sctC.webp" alt="logo" className="ll" />
+        <img
+          src="https://cdn.acroford.com/sctC.webp"
+          alt="logo"
+          className="ll"
+        />
         <h1 className="lh">{name}</h1>
         <p className="lv">Version: {version}</p>
         <p className="ld">{description}</p>
         <p className="lal">Recommended Grade: <b>{audienceLevel}</b></p>
+        <button onClick={handleStart}>Start</button>
       </div>
     </div>
   );
 }
 
-function Reading({ lessonData }) {
+function Reading({ lessonData, currentPageNumber, handleNextPage }) {
   const convertToHTML = (jsonContent) => {
     if (!jsonContent) return null;
 
@@ -78,7 +85,7 @@ function Reading({ lessonData }) {
       } else {
         let style = {};
         if (block.inlineStyleRanges) {
-          block.inlineStyleRanges.forEach(range => {
+          block.inlineStyleRanges.forEach((range) => {
             if (range.style === "BOLD") {
               style.fontWeight = "bold";
             } else if (range.style === "UNDERLINE") {
@@ -113,10 +120,14 @@ function Reading({ lessonData }) {
   };
 
   if (!lessonData) {
-    return <div>Loading...</div>; // or some other loading indicator
+    return <div>Loading...</div>;
   }
 
-  const currentPageData = lessonData.lessonData.pagesData["1"];
+  const currentPageData = lessonData.lessonData.pagesData[currentPageNumber];
+
+  if (!currentPageData) {
+    return <div>Page data not found</div>;
+  }
 
   const htmlContent = convertToHTML(currentPageData.data);
 
@@ -124,27 +135,35 @@ function Reading({ lessonData }) {
     <div className="container">
       <div className="panel text-center align-items-center">
         <div className="lessonContent">{htmlContent}</div>
+        <button onClick={() => handleNextPage(currentPageNumber + 1)}>Next</button>
       </div>
     </div>
   );
 }
 
-function QuizL({}) {}
-
-function ResultsL({}) {}
-
-function StartL({}) {}
-
-function EndL({}) {}
-
 function LessonPlayer() {
   const [lessonData, setLessonData] = useState(null);
+  const [currentPage, setCurrentPage] = useState("Info");
+
+  const handleStart = () => {
+    setCurrentPage(1);
+  };
+
+  const handleNextPage = (page) => {
+    setCurrentPage(page);
+  };
 
   return (
     <div>
       <Navbar />
+      {currentPage === "Info" ? (
+        <InfoL lessonData={lessonData} handleStart={handleStart} />
+      ) : currentPage === "Quiz" ? (
+        <QuizL lessonData={lessonData} currentPageNumber={currentPage} handleNextPage={handleNextPage} />
+      ) : (
+        <Reading lessonData={lessonData} currentPageNumber={currentPage} handleNextPage={handleNextPage} />
+      )}
       <FetchLessonDataL setLessonData={setLessonData} />
-      <Reading lessonData={lessonData} />
     </div>
   );
 }
