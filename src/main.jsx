@@ -9,6 +9,7 @@ import LogoutButton from "./components/LogoutButton";
 import Profile from "./components/Profile";
 import AppsList from "./pages/init";
 import LessonPlayer from './components/Lessons/LessonComponents';
+import Player from './components/Lessons/player';
 
 function Main() {
   return (
@@ -21,6 +22,7 @@ function Main() {
         <Route exact path="/app/profile" element={<Profile />} />
         <Route exact path="/" element={<AppsList />} />
         <Route exact path="/app/lessons" element={<LessonPlayer />} />
+        <Route exact path="/dev/lessons" element={<Player />} />
       </Routes>
     </BrowserRouter>
   );

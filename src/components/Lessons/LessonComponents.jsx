@@ -141,31 +141,5 @@ function Reading({ lessonData, currentPageNumber, handleNextPage }) {
   );
 }
 
-function LessonPlayer() {
-  const [lessonData, setLessonData] = useState(null);
-  const [currentPage, setCurrentPage] = useState("Info");
+export { FetchLessonDataL, InfoL, Reading};
 
-  const handleStart = () => {
-    setCurrentPage(1);
-  };
-
-  const handleNextPage = (page) => {
-    setCurrentPage(page);
-  };
-
-  return (
-    <div>
-      <Navbar />
-      {currentPage === "Info" ? (
-        <InfoL lessonData={lessonData} handleStart={handleStart} />
-      ) : currentPage === "Quiz" ? (
-        <QuizL lessonData={lessonData} currentPageNumber={currentPage} handleNextPage={handleNextPage} />
-      ) : (
-        <Reading lessonData={lessonData} currentPageNumber={currentPage} handleNextPage={handleNextPage} />
-      )}
-      <FetchLessonDataL setLessonData={setLessonData} />
-    </div>
-  );
-}
-
-export default LessonPlayer;
